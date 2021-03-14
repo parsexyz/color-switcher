@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
 import './App.css';
 import ColorButton from './ColorButton';
+import LogRocket from 'logrocket';
 
 function App() {
+  LogRocket.init('gdo7ab/5g-challenge');
+  LogRocket.identify('parsedata', {
+    name: 'Jay Fallah',
+    email: 'jay.fallah@parsedata.xyz',
+  });
   const [color, setColor] = useState('aqua')
   console.log(color);
   return (
